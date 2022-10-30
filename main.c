@@ -1,37 +1,51 @@
 #include <stdio.h>
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
-typedef struct list {
-  char* word;
-  struct listNode *next;
-}t_list  ;
-
-typedef struct bTree {
+typedef struct BinTree
+{
   char letter;
-  struct bTreeNode *left;
-  struct bTreeNode *right;
-}t_tree;
+  struct bTree *left;
+  struct bTree *right;
+} btree;
 
-char phraseModels[7][5][7] = {
-  {"nom", "adjectif", "verbe", "nom"},
-  {"foo", "qui", "verbe", "verbe", "nom", "adjectif"},
-  {"adjectif", "nom", "verbe", "adverbe", "adjectif", "nom"}
-};
+typedef struct Word
+{
+  char *content;
+  struct Word *next;
+} word;
 
-int randIntRange(int min, int max) {
+typedef struct CharList
+{
+  struct NaryTree *descend;
+  struct CharList *peer;
+} charList;
+
+typedef struct NaryTree
+{
+  char letter;
+  charList childrenPointers;
+  int charListLength;
+} ntree;
+
+int randIntRange(int min, int max)
+{
   srand(time(0));
   return (rand() % (max - min + 1)) + min;
 }
 
-void main() {
+char phraseModels[3][6][8] = {
+    {"nom", "adjectif", "verbe", "nom"},
+    {"nom", "qui", "verbe", "verbe", "nom", "adjectif"},
+    {"adjectif", "nom", "verbe", "adverbe", "adjectif", "nom"}};
+
+int main()
+{
   printf("Welcome; let's generate some random phrases!\n");
-  printf("To do so, we need to choose a phrase structure:\n");
-  printf("\n");
-  int randModel = randIntRange(0, 2);
-  printf("First let's randomly choose a phrase structure,\nfrom the three we have:\nChosen number: %d\n", randModel);
-  printf("\n");
-  printf("let's see our model:\n");
-  
-  phraseModels[randModel]
+  printf("here is our set of phrase structures:\n");
+  int n = randIntRange(0, 2);
+  printf("%d is the number of the chose phrase structure\n", n);
+
+  return 0;
 }

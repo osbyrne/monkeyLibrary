@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct BinTree
 {
@@ -44,8 +43,8 @@ int main()
 {
   printf("Welcome; let's generate some random phrases!\n");
   printf("here is our set of phrase structures:\n");
-  int n = randIntRange(0, 2);
-  printf("%d is the number of the chose phrase structure\n", n);
+  int nPhraseModel = randIntRange(0, 2);
+  printf("%d is the number of the chosen phrase structure\n", nPhraseModel);
 
   return 0;
 }

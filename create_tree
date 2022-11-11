@@ -1,0 +1,12 @@
+#include "create_tree.h"
+#include <stdio.h>
+#include "testdico"
+#include <stdlib.h>
+struct wordcell create_tree() {
+    FILE* fichier;
+    fichier = fopen("../assets/testdico.txt", "r");
+    if(fichier == NULL){
+        printf("fichier vide");
+        exit(1);
+    }
+}

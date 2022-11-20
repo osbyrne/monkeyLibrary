@@ -9,3 +9,5 @@ This is what we hoped to achieve a handful of weeks ago, when we ran the 'git in
 new landscape of bugs, pull request, bad comments and stack overflows.
 
 Today's commit, hopefully our last, seals a project that settles within us the ideals and tradoffs of collaboration.
+
+To run it, simply open your terminal emulator, go to the project folder and run ./excecutable_file

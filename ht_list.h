@@ -18,8 +18,8 @@ typedef struct s_std_list
 p_cell create_cell(char);
 p_ht_list create_list();
 void add_tail_list(t_ht_list *, char);
-void delete_list(t_ht_list);
 void display_std_list(t_ht_list);
 void display_to_word_void(t_ht_list);
+void delete_list(t_ht_list);
 
 #endif

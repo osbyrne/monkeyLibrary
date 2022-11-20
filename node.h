@@ -43,15 +43,19 @@ typedef struct s_base_node
 } t_base_node, *p_base_node;
 
 p_base_node create_base_node(char);
-p_base_node insert_base_tree(p_base_node *root, p_cell ptr_word);
-void ternary_search_tree_node_traversal(p_base_node, char *, int);
-void traverse_flexed_node_ternary_search_tree(p_flexed_node, char *, int);
-void ternary_search_tree_traversal(p_base_node);
-void flexed_tree_traversal(p_flexed_node);
+
 int ternary_search_tree_search(p_base_node, p_cell);
 p_gender_number create_p_gender_number(t_ht_list *);
+
+p_base_node insert_base_tree(p_base_node *root, p_cell ptr_word);
+void ternary_search_tree_node_traversal(p_base_node, char *, int);
+
 p_flexed_node *insert_to_inflicted_tree(p_flexed_node *root, p_cell word);
 p_flexed_node create_inflicted_tst(char);
 p_flexed_node inserte_flexed_node_from_list(p_flexed_node *, p_cell, t_ht_list *);
+
+void traverse_flexed_node_ternary_search_tree(p_flexed_node, char *, int);
+void ternary_search_tree_traversal(p_base_node);
+void flexed_tree_traversal(p_flexed_node);
 
 #endif
